@@ -1,6 +1,24 @@
 extends layout
 
 block content
-  h1= post.title
+  div.post-container
+    h1= post.title
+    div.span7.post.content.unescape(style='border-color: #{post.color || "#f00"}')
+      = post.content
+      
+    div.span3.pull-right.well.details
+      .detail.published
+        span.posted Posted on 
+        span.date(data-date=post.date)
+      
+      .detail.tags(data-tags=post.tags) Tagged with 
+        each tag in post.tags
+          a(href=tagUrl(tag))= tag
   
-  div.offset-1.span8.content.unescape= post.content
+  
+  script
+    $(function() {
+      $('li[data-ref="blog"]').addClass('active')
+    })
+
+            

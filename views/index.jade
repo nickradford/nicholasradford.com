@@ -4,7 +4,8 @@ block content
   h4 Here, have some blog posts.
   ul.posts
     each post in postList
-      li(style="border-color: #{post.color}")
+      li.post.span7(style="border-color: #{post.color}")
         h4
           a(href=post.url)=  post.title
+            i.icon-share
         p.unescape= post.preview
