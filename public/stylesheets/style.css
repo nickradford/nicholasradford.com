@@ -1,8 +1,70 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: 'Scada';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Scada Bold'), local('Scada-Bold'), url(/fonts/Scada/Scada-Bold.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Scada';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Scada'), local('Scada-Regular'), url(/fonts/Scada/Scada-Regular.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Scada';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Scada Bold Italic'), local('Scada-BoldItalic'), url(/fonts/Scada/Scada-BoldItalic.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Scada';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Scada Italic'), local('Scada-Italic'), url(/fonts/Scada/Scada-Italic.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(/fonts/Scada/SourceCodePro-Regular.ttf) format('woff');
 }
 
-a {
-  color: #00B7FF;
+body {
+  font: 14px "Scada", Helvetica, Arial, sans-serif;
+  display: none;
+}
+
+h1 {
+  font-family: 'Scada';
+  font-weight: 700;
+}
+
+.navbar a{
+  -webkit-transition: color 400ms;
+}
+
+.navbar-inner {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  position: relative;
+  top: -1px;
+}
+
+.navbar li a {
+  height: 25px;
+  line-height: 28px;
+}
+
+.navbar a.brand:hover {
+  color: #000;
+}
+
+ul.posts {
+  margin-left: 0px;
+}
+
+ul.posts li {
+  padding-left: 14px;
+  list-style-type: none;
+  border-left: 3px solid;
 }

@@ -1,7 +1,39 @@
 doctype 5
-html
+html(lang='en')
   head
-    title= title
+    link(rel='stylesheet', href='/css/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/underscore.string/2.3.0/underscore.string.min.js")
+    script(src="/js/bootstrap.js")
+    
+    
+    script
+      // FOUT
+      $('body').hide()
+      $(function() {
+        setTimeout(function() {
+          $('body').show()
+        }, 100)
+        
+        $('.unescape').each(function() {
+          $(this).html(_.str.unescapeHTML($(this).html()))
+        })
+      })
+      // end 
+      
   body
-    block content
+    div.container
+      div.navbar
+        div.navbar-inner
+          a.brand(href='/') Nicholas Radford
+          ul.nav
+            li
+              a(href='/') Blog
+            li
+              a(href='/projects') Projects
+            li.pull-right
+              a(href='//github.com/nickradford') GitHub
+              
+      block content
