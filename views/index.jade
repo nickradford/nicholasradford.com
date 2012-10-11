@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 NicholasRadford.com
+  p Excuse me, while I clean this up.
+  
+  ul.posts
+    each post in postList
+      li
+        a(href=post.url)=  post.title
